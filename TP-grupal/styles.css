@@ -84,7 +84,7 @@ nav a:hover {
 .generic-section {
   background: #f5e8cc;
   padding: 0 200px;
-  min-height: 563px;
+  min-height: auto;
   margin-top: 38px;
 }
 .generic-container {
