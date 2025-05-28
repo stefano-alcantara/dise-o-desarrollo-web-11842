@@ -1,94 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grupo 05 - Integrantes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrantes - Grupo 05</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
-<body class="bg-[#f8ecd1] text-black flex flex-col min-h-screen">
-  <!-- Header superior -->
-  <header class="bg-[#f8ecd1] text-xs text-center py-1">
-    Proyecto Grupal - Diseño y Desarrollo Web - 2025 - Grupo 05
-  </header>
-
-  <!-- Barra de navegación -->
-  <nav class="flex items-center justify-between px-6 py-4 bg-[#f4e3c3]">
-    <img src="imagenes/logo.png" alt="Logo Grupo 05" class="max-w-28 sm:max-w-32 md:max-w-36 w-auto" />
-    <ul class="flex space-x-8 font-semibold">
-      <li><a href="index.html" class="hover:underline">Inicio</a></li>
-      <li><a href="avances.html" class="hover:underline">Avances</a></li>
-      <li><a href="proyecto.html" class="hover:underline">Proyecto</a></li>
-    </ul>
-  </nav>
-
-  <!-- Banner de Integrantes -->
-  <section class="flex justify-center bg-white py-8">
-    <img src="imagenes/integrantes.png" alt="Integrantes"
-      class="max-w-[160px] sm:max-w-[200px] md:max-w-[220px] w-auto" />
-  </section>
-
-  <!-- Sección de integrantes -->
-  <main class="px-6 py-12 bg-[#f8ecd1] flex-grow">
-    <div class="bg-white rounded-2xl p-8 max-w-6xl mx-auto">
-      <div class="inline-block bg-[#f4e3c3] text-black px-6 py-2 rounded-xl mb-6 font-bold text-lg">
-        INTEGRANTES
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6">
-        <!-- Integrante 1 -->
-        <div class="flex flex-col items-center">
-          <img src="thomas.png" alt="Thomas Delli Antoni"
-            class="w-36 h-36 rounded-full object-cover border shadow mb-4" />
-          <h3 class="font-bold text-center mb-2">Thomas Delli Antoni</h3>
-          <a href="#" target="_blank"
-            class="bg-[#f4e3c3] text-black py-2 px-4 rounded-md font-semibold hover:bg-[#e2d2b4]">
-            Ver Portfolio
-          </a>
-        </div>
-
-        <!-- Integrante 2 -->
-        <div class="flex flex-col items-center">
-          <img src="mariano.png" alt="Mariano Alvarez" class="w-36 h-36 rounded-full object-cover border shadow mb-4" />
-          <h3 class="font-bold text-center mb-2">Mariano Alvarez</h3>
-          <a href="#" target="_blank"
-            class="bg-[#f4e3c3] text-black py-2 px-4 rounded-md font-semibold hover:bg-[#e2d2b4]">
-            Ver Portfolio
-          </a>
-        </div>
-
-        <!-- Integrante 3 -->
-        <div class="flex flex-col items-center">
-          <img src="stefano.png" alt="Stefano Alcantara"
-            class="w-36 h-36 rounded-full object-cover border shadow mb-4" />
-          <h3 class="font-bold text-center mb-2">Stefano Alcantara</h3>
-          <a href="#" target="_blank"
-            class="bg-[#f4e3c3] text-black py-2 px-4 rounded-md font-semibold hover:bg-[#e2d2b4]">
-            Ver Portfolio
-          </a>
-        </div>
-
-        <!-- Integrante 4 -->
-        <div class="flex flex-col items-center">
-          <img src="maria.png" alt="Castellano Maria"
-            class="w-36 h-36 rounded-full object-cover border shadow mb-4" />
-          <h3 class="font-bold text-center mb-2">Castellano Maria</h3>
-          <a href="#" target="_blank"
-            class="bg-[#f4e3c3] text-black py-2 px-4 rounded-md font-semibold hover:bg-[#e2d2b4]">
-            Ver Portfolio
-          </a>
-        </div>
-      </div>
+<body>
+  <header>
+    <div class="top-bar">
+        Proyecto Grupal - Diseño y Desarrollo Web - 2025 - Grupo 05
     </div>
+    <div class="header-top">
+      <img src="imagenes/logo.png" alt="Logo Grupo 05" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="avances.html">Avances</a></li>
+          <li><a href="proyecto.html">Proyecto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="banner">
+      <img src="imagenes/integrantes.png" alt="Integrantes" class="banner-img">
+    </section>
+    <section class="integrantes-section">
+      <div class="integrantes-container">
+        <div class="integrantes-title">
+          <span>INTEGRANTES</span>
+        </div>
+        <div class="integrantes-list">
+          <div class="integrante">
+            <div class="avatar" style="background-image: url('imagenes/photo_thomas.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="nombre">Thomas Delli Antoni</div>
+            <a href="https://tdelliantoni.github.io/Ejercicio-Obligatorio-UVA2/" class="portfolio-btn" target="_blank">Ver Portfolio</a>
+          </div>
+          <div class="integrante">
+            <div class="avatar" style="background-image: url('imagenes/Mariano.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="nombre">Mariano Alvarez</div>
+            <a href="#" class="portfolio-btn" target="_blank">Ver Portfolio</a>
+          </div>
+          <div class="integrante">
+            <div class="avatar" style="background-image: url('imagenes/Stefano.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="nombre">Stefano Alcantara</div>
+            <a href="https://stefano-alcantara.github.io/dise-o-desarrollo-web-11842/UVA-2/integrador/diseno_desarrollo_web.html" class="portfolio-btn" target="_blank">Ver Portfolio</a>
+          </div>
+          <div class="integrante">
+            <div class="avatar" style="background-image: url('imagenes/maru.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="nombre">Castellano Maria</div>
+            <a href="#" class="portfolio-btn target="_blank"">Ver Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-
-
-  <!-- Footer -->
-  <footer class="bg-[#f4e3c3] text-center py-4 text-sm font-medium text-black">
-    🎠 Gracias por visitar nuestro parque. ¡Esperamos verte en la próxima aventura digital!
+  <footer>
+    <div class="footer-text">
+      % Gracias por visitar nuestro parque. ¡Esperamos verte en la próxima aventura digital!
+    </div>
   </footer>
 </body>
-
-</html>
+</html> 
