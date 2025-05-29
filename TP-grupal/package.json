@@ -1,6 +1,13 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.8",
-    "tailwindcss": "^4.1.8"
+  "name": "sitio-grupo-05",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "tailwindcss -i ./input.css -o ./src/output.css --minify",
+    "watch:css": "tailwindcss -i ./input.css -o ./src/output.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0"
   }
 }
