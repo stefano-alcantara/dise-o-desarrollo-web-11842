@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-brownbck: #5E4C27;
+}
 
 
 /* Estilos base */
@@ -90,6 +90,11 @@ nav a:hover {
   object-fit: contain;
   display: block;
   margin: 0 auto;
+}
+
+.banner-coaster{
+  width: 100%;
+  height: 100vh;
 }
 
 /* CONTENEDORES */
@@ -201,7 +206,6 @@ footer {
   color: #5E4C27;
   letter-spacing: 0.05em;
   width: 100%;
-  margin-top: 40px;
   flex-shrink: 0;
 }
 
