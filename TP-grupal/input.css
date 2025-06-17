@@ -229,33 +229,42 @@ footer {
 }
 
 .mobile-menu {
-  position: fixed;
-  top: 50px;
+  position: absolute; /* cambia de fixed a absolute */
+  top: 100%;
   left: 0;
-  width: 100vw;
-  height: 25vh;
+  width: 100%;
   background-color: #fdf3dd;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 0 20px 20px;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
   z-index: 3000;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 60px;
-  transition: transform 0.3s ease-in-out;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 70vh;
 }
+
 
 .mobile-menu ul {
   list-style: none;
   width: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mobile-menu li {
-  padding: 16px 20px;
+  padding: 16px 0;
+  width: 100%;
+  text-align: center;
   border-bottom: 1px solid #e0d4b2;
 }
+
 
 .mobile-menu a {
   font-size: 18px;
