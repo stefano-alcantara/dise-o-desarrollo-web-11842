@@ -11,13 +11,13 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Baloo Paaji 2', Arial, sans-serif;
-  background-color: #f5e8cc;
+  background-color: #F8EDD7;
   color: #222;
 }
 
 /* HEADER */
 header {
-  background: #f5e0b7;
+  background: #F8EDD7;
   position: fixed;
   top: 0;
   left: 0;
