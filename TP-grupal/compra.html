@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto - Grupo 05</title>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body class="flex flex-col justify-between">
+  <header>
+    <div class="header-top">
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <img src="imagenes/logo.png" alt="Logo Grupo 05" class="logo">
+      <nav id="mobile-menu" class="mobile-menu hidden">
+        <ul>
+          <li><a href="proyecto.html">Inicio</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="atracciones.html">Atracciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li><a href="proyecto.html">Inicio</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="atracciones.html">Atracciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex flex-col md:pt-[100px] bg-white">
+
+    <!--Progreso-->
+    <div class="flex gap-2 justify-center items-center py-10">
+      <div class="flex justify-center items-center bg-brownbck rounded-full w-8 h-8 md:w-10 md:h-10">
+        <span class="font-semibold text-white md:text-2xl">1</span>
+      </div>
+      <span class="text-brownbck font-semibold md:text-2xl">Compra</span>
+
+      <hr class="text-gray-500 font-semibold w-5 md:w-20 border-2 rounded-full pagoProg">
+
+      <div class="flex justify-center items-center bg-gray-500 rounded-full w-8 h-8 md:w-10 md:h-10 pagoProg">
+        <span class="font-semibold text-white md:text-2xl">2</span>
+      </div>
+      <span class="text-gray-500 font-semibold md:text-2xl pagoProg">Pago</span>
+
+      <hr class="text-gray-500 font-semibold w-5 md:w-20 border-2 rounded-full complProg">
+
+      <div class="flex justify-center items-center bg-gray-500 rounded-full w-8 h-8 md:w-10 md:h-10 complProg">
+        <span class="font-semibold text-white md:text-2xl">3</span>
+      </div>
+      <span class="text-gray-500 font-semibold md:text-2xl complProg">Completado</span>
+    </div>
+
+    <!-- Sección compra-->
+    <section id="compraSection" class="h-full pb-10">
+      <div class="flex items-center pl-5 gap-3">
+        <button class="rotate-180 cursor-pointer w-10 md:w-20">
+          <a href="proyecto.html">
+            <img src="imagenes/Back Arrow.svg" alt="Atrás">
+          </a>
+        </button>
+        <h1 id="fase" class="text-2xl md:text-4xl">Completá tu compra</h1>
+      </div>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-10 px-3 md:p-10 pt-0">
+        <div class="px-4 py-10 rounded-2xl shadow-md space-y-4 w-full md:w-2/4 border-[#D9D9D9] border min-h-3/4">
+
+          <!-- Header producto -->
+          <div class="flex items-start gap-4">
+            <img src="imagenes/game1.png" alt="Atraccion" class="rounded-xl w-40">
+            <div>
+              <h2 class="font-semibold text-sm md:text-2xl">Pase General - Tierraventura</h2>
+              <p class="text-gray-500 text-xs md:text-xl">Av. General Paz 1820 - CABA - 1834</p>
+            </div>
+          </div>
+
+          <!-- Selectores -->
+          <div class="grid grid-cols-2 gap-2">
+            <div class="border rounded-lg px-4 py-2 flex items-center justify-between w-full">
+              <span class="font-semibold text-[#4f3c1f]">Adultos</span>
+              <div class="flex items-center gap-2">
+                <button onclick="cambiarCantidad('adultos', -1)" class="text-xl font-bold cursor-pointer">-</button>
+                <span id="adultos" class="font-bold text-lg">0</span>
+                <button onclick="cambiarCantidad('adultos', 1)" class="text-xl font-bold cursor-pointer">+</button>
+              </div>
+            </div>
+
+            <div class="border rounded-lg px-4 py-2 flex items-center justify-between w-full">
+              <span class="font-semibold text-[#4f3c1f]">Niños</span>
+              <div class="flex items-center gap-2">
+                <button onclick="cambiarCantidad('niños', -1)" class="text-xl font-bold cursor-pointer">-</button>
+                <span id="niños" class="font-bold text-lg">0</span>
+                <button onclick="cambiarCantidad('niños', 1)" class="text-xl font-bold cursor-pointer">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" placeholder="Cupón de descuento"
+              class="border rounded-lg px-4 py-2 flex items-center justify-between w-full font-semibold text-[#4f3c1f]">
+            <input type="email" placeholder="Email"
+              class="border rounded-lg px-4 py-2 flex items-center justify-between w-full font-semibold text-[#4f3c1f]">
+          </div>
+
+          <hr class="border-[1.8px] border-brownbck">
+
+          <!-- Meses -->
+          <div id="mesSelect" class="flex gap-2 overflow-auto p-3">
+            <button id="Enero"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-[100px] min-w-[100x] max-w-[100x] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Enero</p>
+            </button>
+            <button id="Febrero"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Febrero</p>
+            </button>
+            <button id="Marzo"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Marzo</p>
+            </button>
+            <button id="Abril"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Abril</p>
+            </button>
+            <button id="Mayo"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Mayo</p>
+            </button>
+            <button id="Junio"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Junio</p>
+            </button>
+            <button id="Julio"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Julio</p>
+            </button>
+            <button id="Agosto"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Agosto</p>
+            </button>
+            <button id="Septiembre"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Septiembre</p>
+            </button>
+            <button id="Octubre"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Octubre</p>
+            </button>
+            <button id="Noviembre"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Noviembre</p>
+            </button>
+            <button id="Diciembre"
+              class="flex flex-col gap-3 shadow-lg rounded-[8px] pt-6 pb-1 border-[#D9D9D9] border hover:bg-[#97979752] cursor-pointer font-semibold text-sm w-1008px] min-w-[100px] max-w-[100px] flex-shrink-0">
+              <div>
+                <p class="text-brownbck">$2500</p>
+                <p class="text-brownbck text-xs">$1500</p>
+              </div>
+              <p>Diciembre</p>
+            </button>
+          </div>
+
+          <div id="integrantesList" class="flex flex-col gap-3 overflow-y-auto max-h-32">
+          </div>
+
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md space-y-5 w-full md:w-1/3 border-[#D9D9D9] border min-h-3/4">
+
+          <h2 class="font-semibold text-lg">Resumen del Pedido</h2>
+
+          <div class="flex justify-between">
+            <span class="text-[#4f3c1f]">Precio Adultos</span>
+            <span id="adultosPrecio" class="text-[#4f3c1f]">$0</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span class="text-[#4f3c1f]">Precio Niños</span>
+            <span id="niñosPrecio" class="text-[#4f3c1f]">$0</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span class="text-[#4f3c1f]">Descuentos</span>
+            <span id="descuento" class="text-[#4f3c1f]">$0</span>
+          </div>
+
+          <hr class="border-t border-dashed border-gray-400 my-4">
+
+          <div class="flex justify-between">
+            <span class=" text-[#4f3c1f]">Monto a Pagar</span>
+            <span id="montoTotal" class=" text-[#4f3c1f]">$0</span>
+          </div>
+
+          <h2 class="font-semibold text-lg">Seleccione el método de pago</h2>
+
+          <div id="metodoSelect" class="grid grid-cols-2 gap-2">
+            <button id="credito"
+              class="border-[2px] border-brownbck rounded-[8px] p-[8px] hover:bg-[#97979752] cursor-pointer font-semibold text-sm">Tarjeta
+              de Credito</button>
+            <button id="debito"
+              class="border-[2px] border-brownbck rounded-[8px] p-[8px] hover:bg-[#97979752] cursor-pointer font-semibold text-sm">Tarjeta
+              de Débito</button>
+            <button id="apple"
+              class="border-[2px] border-brownbck rounded-[8px] p-[8px] hover:bg-[#97979752] cursor-pointer font-semibold text-sm">Apple
+              Pay</button>
+            <button id="google"
+              class="border-[2px] border-brownbck rounded-[8px] p-[8px] hover:bg-[#97979752] cursor-pointer font-semibold text-sm">Google
+              Pay</button>
+            <button id="mercadoPago"
+              class="border-[2px] border-brownbck rounded-[8px] p-[8px] hover:bg-[#97979752] cursor-pointer font-semibold text-sm">Mercado
+              Pago</button>
+          </div>
+
+          <button id="continuarBtn"
+            class="w-full bg-brownbck rounded-[8px] font-semibold text-white py-3 cursor-pointer"
+            onclick="cambiarFase('siguiente')">Siguiente</button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Pago-->
+    <section id="pagoSection" class="hidden h-full pb-10">
+
+      <div class="flex items-center pl-5 gap-3">
+        <button class="rotate-180 cursor-pointer w-10 md:w-20" onclick="cambiarFase('atras')">
+            <img src="imagenes/Back Arrow.svg" alt="Atrás">
+        </button>
+        <h1 id="fase" class="text-2xl md:text-4xl">Completá el pago</h1>
+      </div>
+
+      <div class="flex flex-col jutify-center items-center">
+        <div class="bg-white p-6 rounded-2xl shadow-md space-y-5 w-full md:w-1/3 border-[#D9D9D9] border min-h-3/4">
+
+          <h2 class="font-semibold text-2xl">Detalles de la Tarjeta</h2>
+
+          <label for="numTarjeta font-semibold text-2xl">Número de Tarjeta</label>
+          <input id="numTarjeta" type="text" placeholder="XXXX XXXX XXXX XXXX"
+            class="border rounded-lg px-4 py-2 flex items-center justify-between w-full font-semibold text-[#4f3c1f]">
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label for="numTarjeta font-semibold text-2xl">Fecha de Expiración</label>
+              <input id="numTarjeta" type="text" placeholder="MM/YY"
+                class="border rounded-lg px-4 py-2 flex items-center justify-between w-full font-semibold text-[#4f3c1f]">
+            </div>
+            <div>
+              <label for="numTarjeta font-semibold text-2xl">Código de seguridad</label>
+              <input id="numTarjeta" type="text" placeholder="XXXX"
+                class="border rounded-lg px-4 py-2 flex items-center justify-between w-full font-semibold text-[#4f3c1f]">
+            </div>
+          </div>
+
+          <div class="w-full flex justify-center">
+            <img class="w-40" src="imagenes/banks.png" alt="">
+          </div>
+
+          <button id="continuarBtn"
+            class="w-full bg-brownbck rounded-[8px] font-semibold text-white py-3 cursor-pointer"
+            onclick="cambiarFase('siguiente')">Confirmar Pago</button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Completado-->
+    <section id="completadoSection" class="h-full hidden pb-10">
+      <div class="flex flex-col jutify-center items-center gap-16 p-5 md:p-20 w-full">
+        <div class="flex justify-center items-center w-60 h-60 bg-brownbck rounded-full">
+          <img src="imagenes/Done.png" alt="">
+        </div>
+        <span class="font-semibold text-2xl text-center">¡Compra completada con éxito!</span>
+        <div class="flex flex-col">
+          <span class="text-xl text-center">Te enviamos el comprobante al correo:</span>
+          <b class="text-xl text-center" id="email">tucorreo@mail.com</b>
+        </div>
+        <a href="proyecto.html" class="font-bold text-2xl text-center">Volver al Inicio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="flex flex-col justify-center items-center gap-3 md:flex-row md:justify-around">
+      <div class="flex flex-col text-left gap-3 items-center">     
+        <div class="flex gap-3 justify-center text-center">
+          <p><b>Integrantes</b></p>
+          <p>Thomas Delli Antoni</p>
+          <p>Mariano Alvarez</p>
+          <p>Stefano Alcantara</p>
+          <p>Castellano Maria</p>
+        </div>
+        <b>Trabajo grupal- Maeria Diseño y Desarrollo Web (11842 - Grupo 05)</b>
+      </div>
+      <div class="flex gap-3 items-center">
+        <p><b class="text-nowrap">Sitio Web del grupo</b></p>
+        <img src="imagenes/uade-logo.png" alt="">
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    const precioAdulto = 2500;
+    const precioNiño = 1500;
+    const metodoBtns = document.querySelectorAll("#metodoSelect button");
+    const mesBtns = document.querySelectorAll("#mesSelect button");
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get("tipo");
+    let fases = ['Compra', 'Pago', 'Completado'];
+    let fase = fases[0];
+    let contadorAdultos = 0;
+    let contadorNinos = 0;
+
+    metodoBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        metodoBtns.forEach(b => b.classList.remove("bg-[#97979752]", "selected"));
+        btn.classList.add("bg-[#97979752]", "selected");
+      });
+    });
+
+    mesBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        mesBtns.forEach(b => b.classList.remove("bg-[#97979752]", "selected"));
+        btn.classList.add("bg-[#97979752]", "selected");
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("show");
+      });
+    });
+
+    function cambiarCantidad(id, cambio) {
+
+      // Cambio valor del input //
+      const span = document.getElementById(id);
+      let valor = parseInt(span.textContent);
+      valor = Math.max(0, valor + cambio);
+      span.textContent = valor;
+
+      // Cambio valor en el resumen //
+      const valueSpan = document.getElementById(`${id}Precio`);
+      valueSpan.textContent = valor !== 0 ? `$${id === "adultos" ? precioAdulto : precioNiño} x${valor}` : "$0"
+
+      // Cambio monto total //
+      const adultosCant = parseInt(document.getElementById('adultos').textContent);
+      const niñosCant = parseInt(document.getElementById('niños').textContent);
+      const descuento = 0;
+
+      const montoSpan = document.getElementById("montoTotal");
+      montoSpan.textContent = `$${(precioAdulto * adultosCant) + (precioNiño * niñosCant) - descuento}`;
+
+      const accion = cambio === -1 ? 'quitar' : 'agregar';
+      if (tipo === 'anual') {
+        modificarIntegrantes(id, accion)
+      }
+    }
+
+    function modificarIntegrantes(tipo, accion) {
+      const container = document.getElementById("integrantesList");
+
+      if (accion === 'agregar') {
+        const grupo = document.createElement("div");
+        grupo.className = `space-y-2 persona ${tipo}`;
+
+        let numero, titulo;
+        if (tipo === 'adultos') {
+          contadorAdultos++;
+          numero = contadorAdultos;
+          titulo = `Adulto ${numero}`;
+        } else {
+          contadorNinos++;
+          numero = contadorNinos;
+          titulo = `Niño ${numero}`;
+        }
+
+        grupo.innerHTML = `
+        <p class="text-sm font-semibold">${titulo}</p>
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" placeholder="Nombre" class="border p-2 rounded text-sm w-full">
+          <input type="text" placeholder="Apellido" class="border p-2 rounded text-sm w-full">
+          <input type="text" placeholder="DNI" class="border p-2 rounded text-sm w-full">
+          <input type="date" placeholder="Fecha de Nacimiento" class="border p-2 rounded text-sm w-full">
+        </div>
+      `;
+
+        container.appendChild(grupo);
+      }
+
+      else if (accion === 'quitar') {
+        const ultimo = container.querySelector(`.${tipo}:last-child`);
+        if (ultimo) {
+          container.removeChild(ultimo);
+          if (tipo === 'adultos') contadorAdultos--;
+          else contadorNinos--;
+        }
+      }
+    }
+
+    function cambiarFase(direccion) {
+
+      const index = fases.indexOf(fase);
+
+      if (direccion === "atras") {
+        fase = fases[index - 1]
+      } else {
+        fase = fases[index + 1];
+      }
+
+      document.getElementById('compraSection').classList.add("hidden")
+      document.getElementById('pagoSection').classList.add("hidden")
+      document.getElementById('completadoSection').classList.add("hidden")
+
+
+      if (fase === fases[0]) {
+        document.getElementById('compraSection').classList.remove("hidden");
+        document.querySelectorAll(".pagoProg").forEach(item => {
+          if (item.tagName === 'DIV') {
+            item.classList.add("bg-gray-500");
+            item.classList.remove("bg-brownbck");
+          } else {
+            item.classList.add("text-gray-500");
+            item.classList.remove("text-brownbck");
+          }
+        });
+        return
+      }
+
+      if (fase === fases[1]) {
+        document.querySelectorAll(".pagoProg").forEach(item => {
+          if (item.tagName === 'DIV') {
+            item.classList.remove("bg-gray-500");
+            item.classList.add("bg-brownbck");
+          } else {
+            item.classList.remove("text-gray-500");
+            item.classList.add("text-brownbck");
+          }
+        });
+        document.querySelectorAll(".complProg").forEach(item => {
+          if (item.tagName === 'DIV') {
+            item.classList.add("bg-gray-500");
+            item.classList.remove("bg-brownbck");
+          } else {
+            item.classList.add("text-gray-500");
+            item.classList.remove("text-brownbck");
+          }
+        });
+        document.getElementById('pagoSection').classList.remove("hidden");
+        return;
+      }
+
+      if (fase === fases[2]) {
+        document.querySelectorAll(".complProg").forEach(item => {
+          if (item.tagName === 'DIV') {
+            item.classList.remove("bg-gray-500");
+            item.classList.add("bg-brownbck");
+          } else {
+            item.classList.remove("text-gray-500");
+            item.classList.add("text-brownbck");
+          }
+        });
+        document.getElementById('completadoSection').classList.remove("hidden");
+        return;
+      }
+    }
+  </script>
+</body>
+
+</html>
