@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto - Grupo 05</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <header>
+        <div class="top-bar">
+            Proyecto Grupal - Diseño y Desarrollo Web - 2025 - Grupo 05
+        </div>
+        <div class="header-top">
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <img src="imagenes/logo.png" alt="Logo Grupo 05" class="logo" />
+            <nav id="mobile-menu" class="mobile-menu hidden">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="avances.html">Avances</a></li>
+                    <li><a href="demo.html">Proyecto</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="avances.html">Avances</a></li>
+                    <li><a href="demo.html">Proyecto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="generic-main">
+
+        <section class="banner">
+            <img src="imagenes/proyecto.png" alt="Avances" class="banner-img" />
+        </section>
+
+        <section class="generic-section">
+            <div class="generic-container">
+                <div class="generic-title"><span>Propuesta</span></div>
+                <div class="generic-content">
+                    <p>
+                        El parque temático Terraventura busca fortalecer su presencia digital mediante la creación de un
+                        sitio web moderno, interactivo y funcional que refleje la magia, aventura y diversidad de
+                        experiencias que ofrece a sus visitantes. La plataforma servirá como una puerta de entrada
+                        digital al parque, facilitando la planificación de visitas, la compra de entradas y el acceso a
+                        toda la información necesaria para vivir una experiencia inolvidable.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="flex justify-center">
+            <button class="bg-[#EED39D] w-40 font-bold py-2 px-4 rounded-xl"><a href="proyecto.html">Link a la website</a></button>
+        </section>
+
+
+        <section class="generic-section flex justify-center">
+            <video controls>
+                <source src="imagenes/Demo.mp4" type="video/mp4">
+                Tu navegador no soporta el video HTML5.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            % Gracias por visitar nuestro parque. ¡Esperamos verte en la próxima aventura digital!
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.querySelector(".menu-toggle");
+            const menu = document.getElementById("mobile-menu");
+            toggle.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+                menu.classList.toggle("show");
+            });
+        });
+    </script>
+</body>
+
+</html>
