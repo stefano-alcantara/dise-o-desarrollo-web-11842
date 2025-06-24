@@ -25,7 +25,7 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
-      <nav>
+      <nav >
         <ul>
           <li><a href="proyecto.html">Inicio</a></li>
           <li><a href="calendario.html">Calendario</a></li>
@@ -47,10 +47,10 @@
     </section>
 
     <section class="p-5 md:p-20 flex justify-center">
-      <div>
+      <div class="md:w-1/3 md:h-96 md:text-xl">
         <div class="flex justify-between items-center px-4 py-2 border-gray-400">
           <button onclick="cambiarMes(-1)" class="cursor-pointer text-2xl">←</button>
-          <h2 id="tituloMes" class="text-5xl font-black"></h2>
+          <h2 id="tituloMes" class="text-5xl font-black md:text-7xl"></h2>
           <button onclick="cambiarMes(1)" class="cursor-pointer text-2xl">→</button>
         </div>
 
@@ -70,15 +70,15 @@
         <div class="flex justify-center gap-4 mb-2 px-2">
           <div class="flex justify-center items-center gap-2">
             <div class="w-4 h-4 bg-green-600 rounded"></div>
-            <span class="text-sm font-semibold">Parque abierto</span>
+            <span class="text-sm font-semibold md:text-xl">Parque abierto</span>
           </div>
           <div class="flex justify-center items-center gap-2">
             <div class="w-4 h-4 bg-gray-500 rounded"></div>
-            <span class="text-sm font-semibold">Parque cerrado</span>
+            <span class="text-sm font-semibold md:text-xl">Parque cerrado</span>
           </div>
         </div>
 
-        <div class="bg-brownbck text-[11px] text-white p-2 rounded-b-lg leading-tight">
+        <div class="bg-brownbck text-white p-2 rounded-b-lg leading-tight">
           Abierto desde las 11:00 hs. Parque de la Costa se reserva el derecho de admisión y permanencia. Días y
           horarios de apertura sujetos a modificaciones sin previo aviso.
         </div>
@@ -87,7 +87,7 @@
   </main>
 
   <footer>
-    <div class="flex flex-col justify-center items-center gap-3 md:flex-row md:justify-around">
+    <div class="flex flex-col justify-center items-center gap-3 md:flex-row md:justify-around md:text-xl">
       <div class="flex flex-col text-center gap-3 items-center md:text-left">
         <div class="flex gap-3 justify-center text-center">
           <p><b>Integrantes</b></p>
